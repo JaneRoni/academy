@@ -2,10 +2,10 @@ package by.academy.lesson3;
 
 import java.util.Scanner;
 
-public class Tack3 {
+public class Task3 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.print("Enter month ");
+		System.out.print("Введите месяц ");
 		String str = scan.nextLine();
 		scan.close();
 
@@ -33,6 +33,30 @@ public class Tack3 {
 		case "июнь":
 			System.out.println("6");
 			break;	
+			
+		case "июль":
+			System.out.println("7");
+			break;
+			
+		case "август":
+			System.out.println("8");
+			break;
+			
+		case "сентябрь":
+			System.out.println("9");
+			break;
+			
+		case "октябрь":
+			System.out.println("10");
+			break;
+			
+		case "ноябрь":
+			System.out.println("11");
+			break;
+			
+		case "декабрь":
+			System.out.println("12");
+			break;
 		}
 
 	}

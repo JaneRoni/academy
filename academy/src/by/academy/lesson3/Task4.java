@@ -1,8 +1,8 @@
 package by.academy.lesson3;
 
-public class Tack4 {
+public class Task4 {
 	public static void main(String[] args) {
-		int x = 5;
+		int x = 4;
 		int z = x % 2;
 		
 		if (z==0) {

@@ -1,6 +1,6 @@
 package by.academy.lesson3;
 
-public class Tack1 {
+public class Task1 {
 	public static void main (String [] args) {
 	
 	int a = 2_123_000;
