@@ -2,7 +2,7 @@ package by.academy.lesson4;
 
 import java.util.Random;
 
-public class Arr {
+public class ArrL4Ex {
 	public static void main (String [] args) {
 		int[] array = new int [10];
 		Random rand = new Random();

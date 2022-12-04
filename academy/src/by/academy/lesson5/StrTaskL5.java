@@ -2,7 +2,7 @@ package by.academy.lesson5;
 
 import java.util.Scanner;
 
-public class StrTask {
+public class StrTaskL5 {
 	public static void main(String[] args) {
 		
 		/*1. Ввести n строк с консоли, найти самую короткую и самую длинную строки. 

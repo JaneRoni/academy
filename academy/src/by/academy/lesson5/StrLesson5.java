@@ -1,8 +1,8 @@
 package by.academy.lesson5;
 
-public class StrLesson {
+public class StrLesson5 {
 	public static void main(String[] args) {
-		String s="Для работы со строками в языке Java используются классы String,"
+		String s="пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ Java пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ String,"
 				+ "StringBuilder, Stringbuffer";
 		
 		int index = -1;

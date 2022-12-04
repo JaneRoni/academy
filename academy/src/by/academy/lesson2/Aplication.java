@@ -5,7 +5,7 @@ public class Aplication {
 		String cat1 = "Васька";
 		String cat2;
 		
-	public static void cat 
+	public static void cat() { 
 		System.out.println();
 	}
 
