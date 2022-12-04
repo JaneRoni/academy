@@ -2,12 +2,13 @@ package by.academy.lesson2;
 
 public class Cat {
 	public static void main (String [] args) {
-		int age = 2;
+		int age;
 		String nickname;
 	}
 		
 		public void grow(){
-			int catAge = age+1;
+			int age = 2;
+			int catAge = age +1;
 			System.out.print(catAge);
 		}
 	
@@ -29,6 +30,9 @@ public class Cat {
 			// nothing
 		}*/
 		
+		public Cat() {
+			
+		}
 		
 	
 }

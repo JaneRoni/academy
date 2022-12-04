@@ -9,9 +9,11 @@ public class Task3 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Введите число от 1 до 10: ");
-		//String str = scan.nextLine();
+		int x = scan.nextInt();
 		scan.close();
 		
-		System.out.println
-
+		for (int i=1;i<=10;i++) {
+			System.out.println(x*i);
+		}
+	}
 }
