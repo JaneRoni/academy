@@ -9,22 +9,26 @@ public class StrTaskL5 {
 Вывести найденные строки и их длину.*/
 		
 		Scanner sc=new Scanner(System.in);
-		System.out.println("������� ����� �����");
+		System.out.println("Введите число строк: ");
 	
 		int n = sc.nextInt();
 		String smin = sc.next();
 		
 		for(int i=1;i<n;i++) {
 			String s2 = sc.next();
+			if (smin.length()>s2.length()) {
+				
+			}
 			
 		}
+		System.out.println (smin);
+		sc.close();
 		
-		scan.close();
-				
-		//array = scan.nextLine();
-		//scan.close();
+		/*2. Ввести n строк с консоли. Упорядочить и вывести строки в порядке возрастания (убывания) 
+		значений их длины.*/
 		
-		//����� ����� int n ������, ����� = ������ �������, ����� for ����� �������, ������ ���������� ������, ������ ������ ��������� ����� ������, ����� �������� ������ 
+		
+		
 		
 	}
 
