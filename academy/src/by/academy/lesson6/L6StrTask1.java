@@ -1,6 +1,6 @@
 package by.academy.lesson6;
 
-public class L6StrTasks {
+public class L6StrTask1 {
 	public static void main(String[]args) {
 		String str  = "";
 		process (str);

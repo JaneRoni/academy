@@ -1,6 +1,6 @@
 package by.academy.lesson6;
 
-public class StrB {
+public class L6StrTask3 {
 	public static void main(String[]args) {
 		String str1 = "Object-oriented programming is a programming language model organized around objects rather than \"actions\" and data rather than logic. Object-oriented programming blabla. Object-oriented programming bla.";
 		String strLC = str1.toLowerCase();
