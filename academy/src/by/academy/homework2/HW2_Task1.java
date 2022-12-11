@@ -36,60 +36,25 @@ public class HW2_Task1 {
 
 	int arr2[] = new int [16];
 	
-	
 	for (int u=0;u<str1.length();u++) {//hello
 		for (int n=0;n<array.length;n++) {
 			if (array[n]==str1.charAt(u)) {//индекс буквы в массиве букв h-h
-				//System.out.println("in ar "+array[n]);//h
-				//System.out.println("in "+str1.charAt(u));//h
-				//System.out.println("n bef "+n);//7
-				//System.out.println("arr2 [u] bef "+arr2 [u]);//0
 				arr2 [u] = n;
-				
-				//System.out.println("arr2 [u] "+arr2 [u]); //7
-				//arr2 [u]=ind;
 				System.out.println("2: "+arr2[0]+""+arr2[1]+""+arr2[2]+""+arr2[3]+""+arr2[4]); //0
 			}
-		//int sravn = str1.charAt(u);
-		//System.out.println(u);
-		//System.out.println(sravn);
 		}	
 	}
 	
-	//System.out.println("2: "+arr2[0]+""+arr2[1]+""+arr2[2]+""+arr2[3]+""+arr2[4]);//+
-	
 	int count3 = 0;
 	for (int m=0;m<arr2.length;m++) {
-		//System.out.println(arr2.length);
-		//System.out.println(arr2 [0]);//7
-		//System.out.println("m "+arr2 [m]);//7+
 		while(arr2 [m]>0) {
 			if(arr2 [m]==arr2 [m+1]) {
-				//System.out.println("+");//7
 				count3++;
 			}else {
-				//System.out.println("-");//7
 			}
 		break;
 		}
-		
-		/*if (m==0) {
-			System.out.println("0 ");
-		}else {
-			if (arr2[m]==arr[m+1]) {
-				System.out.println("arr2[m] "+arr2[m]);
-				System.out.println("arr[m-1] "+arr[m-1]);
-				count3++;
-				System.out.println("cou3 "+count3);
-			}else {
-				//System.out.println("cou3 "+count3);
-			}
-		}*/
 	}
-	//System.out.println(count3);//1
-	//if (array[d]==str1.charAt(i)) {
-		
-	//}
 	
 	int counter = 0;
 	for (int i=0;i<str1.length();i++) { //первая строка
@@ -98,48 +63,32 @@ public class HW2_Task1 {
 				char l1= str1.charAt(i); //букву по индексу
 				
 				for (int d=0;d<array.length;d++) {
-					
 					if (array[d]==str1.charAt(i)) {//индекс буквы в массиве букв
 						int foun =d;
-						//System.out.println(foun);
-						//System.out.println(arr [foun]);
 						arr [foun] = arr [foun]+1; 
 					}
 				}
-				
-				counter++;
+			counter++;
 			}else{
-				//System.out.println("не"+i+j);
 			}
 		}			
 	}
 	
-
 	int countTr = count3+1;
 	int uni = str1.length()-countTr;
 	int povtor = countTr*countTr;
 	int length = povtor + uni;
 	int sum = 0;
 	
-	
 	for (int t=0;t<arr.length;t++) { 
-		sum = sum+arr[t];
-		
+		sum = sum+arr[t];	
 	}
 	
-	
-	
-	
-	System.out.println("счетчик "+counter);
-	System.out.println("сумма массива"+sum);
 	if (sum==counter && sum==length && counter>0) {
 		System.out.println("true");
-	}else {
+	}else{
 		System.out.println("false");
 	}
 
-	
-	//System.out.println("массив"+arr2);
-	
 	}
 }
