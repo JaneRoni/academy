@@ -1,4 +1,5 @@
 package by.academy.homework2;
+import java.util.Scanner;
 
 public class HW2_Task0 {
 
@@ -7,7 +8,7 @@ public class HW2_Task0 {
 		// Complete the pairs function below.
 		static int pairs(int k, int[] arr) {
 			int pairsCount = 0;
-			// write code here
+			int arr2 [] = new int [10];
 			return pairsCount;
 		}
 
