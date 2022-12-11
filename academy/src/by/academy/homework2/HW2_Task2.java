@@ -1,9 +1,39 @@
 package by.academy.homework2;
 
-/*Ввести n слов с консоли. Найти слово, в котором число различных символов минимально.
- *  Если таких слов несколько, найти первое из них.
+import java.util.Scanner;
+
+/*Р—Р°РґР°РЅРёРµ 2. 
+Р’РІРµСЃС‚Рё n СЃР»РѕРІ СЃ РєРѕРЅСЃРѕР»Рё. РќР°Р№С‚Рё СЃР»РѕРІРѕ, РІ РєРѕС‚РѕСЂРѕРј С‡РёСЃР»Рѕ СЂР°Р·Р»РёС‡РЅС‹С… СЃРёРјРІРѕР»РѕРІ РјРёРЅРёРјР°Р»СЊРЅРѕ. 
+Р•СЃР»Рё С‚Р°РєРёС… СЃР»РѕРІ РЅРµСЃРєРѕР»СЊРєРѕ, РЅР°Р№С‚Рё РїРµСЂРІРѕРµ РёР· РЅРёС….
  */
 
 public class HW2_Task2 {
-
+	public static void main(String[] args) {
+		String arr [] = new String [10];
+		
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃР»РѕРІ: ");
+		int n = scan.nextInt();
+		
+		int counter = 0;
+		while (counter < n) {
+			System.out.println("Р’РІРµРґРёС‚Рµ СЃР»РѕРІРѕ "+(counter+1)+": ");
+			String str = scan.nextLine();
+			counter++;
+			
+			
+			for (int i=0;i<counter;i++) {
+				arr [i] = str;
+				
+			}
+			
+		}
+		
+		scan.close();
+		System.out.println(arr[0]+arr[1]);
+	
+	
+	
+	}
+	
 }

@@ -1,9 +1,28 @@
 package by.academy.homework2;
 
-/*Условие здачи: ввести 2 слова, состоящие из четного числа букв. 
- * Получить слово состоящее из первой половины первого слова и второй половины второго слова.
+import java.util.Scanner;
+
+/*Р—Р°РґР°РЅРёРµ 3. 
+РЈСЃР»РѕРІРёРµ Р·РґР°С‡Рё: РІРІРµСЃС‚Рё 2 СЃР»РѕРІР°, СЃРѕСЃС‚РѕСЏС‰РёРµ РёР· С‡РµС‚РЅРѕРіРѕ С‡РёСЃР»Р° Р±СѓРєРІ. 
+РџРѕР»СѓС‡РёС‚СЊ СЃР»РѕРІРѕ СЃРѕСЃС‚РѕСЏС‰РµРµ РёР· РїРµСЂРІРѕР№ РїРѕР»РѕРІРёРЅС‹ РїРµСЂРІРѕРіРѕ СЃР»РѕРІР° Рё РІС‚РѕСЂРѕР№ РїРѕР»РѕРІРёРЅС‹ РІС‚РѕСЂРѕРіРѕ СЃР»РѕРІР°.
  */
 
 public class HW2_Task3 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ СЃР»РѕРІРѕ: ");
+		String str1 = scan.nextLine();
+		System.out.println("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ СЃР»РѕРІРѕ: ");
+		String str2 = scan.nextLine();
+		scan.close();
+		
+		int len1 = str1.length()/2;
+		int len2 = str2.length()/2;
+		String cut1 = str1.substring(0,len1);
+		String cut2 = str2.substring(len2);
+		
+		String total = cut1 + cut2;
+		System.out.println(total);	
+	}
 
 }
