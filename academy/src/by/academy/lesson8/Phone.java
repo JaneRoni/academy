@@ -20,12 +20,15 @@ public class Phone {
 		this.weight = weight;
 	}
 
-	public Phone(long number, String model) {
-		this.number = number;
-		this.model = model;
+	public Phone(/*long number, String model*/) {
+		this();
+		//this.number = number;
+		//this.model = model;
 	}
 
 	public Phone() {
 		super();
 	}
+	
+	//public Phone 
 }
