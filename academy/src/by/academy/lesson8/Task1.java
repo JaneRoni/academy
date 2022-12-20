@@ -25,7 +25,7 @@ public class Task1 {
 		//System.out.println(phone1);
 		System.out.println(phone1.model+" "+phone1.number+" "+phone1.weight+" ");
 		
-		System.out.println(phone1.receiveCall(phone1.name));
+		//System.out.println(phone1.receiveCall(phone1.name));
 		System.out.println(phone1.getNumber() + " "+phone2.getNumber()+" "+phone3.getNumber());
 		
 		
