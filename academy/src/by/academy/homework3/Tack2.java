@@ -8,18 +8,24 @@ import java.util.Scanner;
 
 public class Tack2 {
  public static void main(String...args) {
-	 Product Product1 = new Product();
-	 Product Product2 = new Product();
-	 Product Product3 = new Product();
 	 
-	 Product1.name = "milk";
-	 Product1.price = 2.05;
+//	 Product Products[] = new Product [3];
+//	 Products[0] = Product1;
+//	 Product Product1 = new Product();
+//	 Product Product2 = new Product();
+//	 Product Product3 = new Product();
 	 
-	 Product2.name = "bread";
-	 Product2.price = 1.10;
-	 
-	 Product3.name = "wine";
-	 Product3.price = 10.10;
+//	 Product Product1 = new Product();
+//	 
+//	 
+//	 Product1.name = "milk";
+//	 Product1.price = 2.05;
+//	 
+//	 Product2.name = "bread";
+//	 Product2.price = 1.10;
+//	 
+//	 Product3.name = "wine";
+//	 Product3.price = 10.10;
 	 
 	 Scanner scan = new Scanner(System.in);
 	 System.out.println("Введите количество "+Product1.name+" : ");
@@ -34,6 +40,6 @@ public class Tack2 {
 	 int quentity3 = scan.nextInt();
 	 //String Prod3 = scan.nextLine();
 	 
-	 
+	
  }
 }

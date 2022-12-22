@@ -1,8 +1,9 @@
 package by.academy.lesson10;
 
-public class Interface Printable{
+public class Interface Printable {
 
-	void Print() {
-
+	void print() {
+		System.out.println();
 	}
+
 }

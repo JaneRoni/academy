@@ -2,7 +2,7 @@ package by.academy.homework3;
 
 public class Deal {
 
-	class Buyer extends Person{
+	public class Buyer extends Person{
 		public Buyer() {
 			super();
 		}
@@ -16,7 +16,14 @@ public class Deal {
 	
 	
 	
-	class Seller extends Person{
+	public class Seller extends Person{
+		public Seller() {
+			super();
+		}
+		
+		public Seller(String name, double money) {
+			super(name, money);
+		}
 		
 		
 	}

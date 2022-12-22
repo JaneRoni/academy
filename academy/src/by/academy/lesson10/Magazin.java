@@ -2,7 +2,7 @@ package by.academy.lesson10;
 
 import java.awt.print.Printable;
 
-public class Magazin implements Printable{
+public class Magazin implements Printable {
 	private String Name;
 	int year;
 
@@ -17,20 +17,36 @@ public class Magazin implements Printable{
 
 	}
 
+	public String getName() {
+		return Name;
+	}
+
+	public void setName() {
+		this.Name = Name;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear() {
+		this.year = year;
+	}
+
 	@Override
 	public void print() {
 		System.out.println("Magazin " + Name);
 	}
 
-public static void printMagazine(Printable[]printable) {
-	
-	for (Printable p : printable) {
-	if (p instanceof Magazin) {
-		//System.out.println("Magazine "+ Name);
-		p.print();
+	public static void printMagazine(Printable[] printable) {
+
+		for (Printable p : printable) {
+			if (p instanceof Magazin) {
+				// System.out.println("Magazine "+ Name);
+				p.print();
+			}
+
+		}
 	}
-	
-	}
-}
 
 }

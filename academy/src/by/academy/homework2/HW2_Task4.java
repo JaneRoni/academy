@@ -81,9 +81,11 @@ public class HW2_Task4 {
 					
 					System.out.println("Игрок "+counter+": "+c1+", "+c2+", "+c3+", "+c4+", "+c5);
 					System.out.println("\n");
+					break;
 				}
 				break;
 			}
+			
 		}
 	}
 }

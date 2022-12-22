@@ -40,7 +40,7 @@ public class HW2_Task1 {
 		for (int n=0;n<array.length;n++) {
 			if (array[n]==str1.charAt(u)) {//индекс буквы в массиве букв h-h
 				arr2 [u] = n;
-				System.out.println("2: "+arr2[0]+""+arr2[1]+""+arr2[2]+""+arr2[3]+""+arr2[4]); //0
+				//System.out.println("2: "+arr2[0]+""+arr2[1]+""+arr2[2]+""+arr2[3]+""+arr2[4]); //0
 			}
 		}	
 	}

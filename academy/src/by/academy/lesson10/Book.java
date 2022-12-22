@@ -14,19 +14,26 @@ public class Book implements Printable {
 		this.Name = Name;
 	}
 
-	@Override
+	public String getName() {
+		return Name;
+	}
+
+	public void setName() {
+		this.Name = Name;
+	}
+
 	public void print() {
 		System.out.println("Book " + Name);
 	}
 
-	public static void printBook(Printable[]printable) {
-		
+	public static void printBook(Printable[] printable) {
+
 		for (Printable p : printable) {
 
-		if (p instanceof Book) {
-			//System.out.println("Book "+ Name);
-			p.print();
+			if (p instanceof Book) {
+				// System.out.println("Book "+ Name);
+				p.print();
+			}
 		}
 	}
-}
 }
