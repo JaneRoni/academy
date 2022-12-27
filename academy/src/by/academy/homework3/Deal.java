@@ -27,12 +27,13 @@ public class Deal {
 		
 		
 	}
-	
-	public double SumDeal() { //СЃСѓРјРјР° СЃРґРµР»РєРё = СЃСѓРјРјР° РїСЂ1+СЃСѓРјРјР° РїСЂ2
+	//массив продуктов
+	//цена финальная
+	//calculatefinalprice как переменная, необязательно хранить
+	public double SumDeal() { //сумма сделки = сумма пр1+сумма пр2
 		//SumDeal1 = 
 		return 1;
-	} 
-
+	}
 	
 	/*String Products[] = new String [30];
 	Products[0] = "Р°РїРµР»СЊСЃРёРЅ";
