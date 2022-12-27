@@ -1,5 +1,6 @@
 package by.academy.homework2;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /*Задание 2. 
@@ -10,80 +11,51 @@ import java.util.Scanner;
 public class HW2_Task2 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Введите первое слово: ");
-		String str1 = scan.nextLine();
-		System.out.println("Введите второе слово: ");
-		String str2 = scan.nextLine();
-		System.out.println("Введите третье слово: ");
-		String str3 = scan.nextLine();
+		System.out.println("Введите количество слов: ");// размерность массива
+		int n = scan.nextInt();
+
+		String arr[] = new String[n]; // массив записи слов
+
+		int i = 0;
+		arr[i] = scan.nextLine();
+
+		for (i = 0; i < arr.length; i++) {// по массиву
+			System.out.println("Введите слово " + (i + 1) + ": ");
+			arr[i] = scan.nextLine();
+		}
+
 		scan.close();
-		
-		char arr[]=new char [26];//числ
-		char x = 'a';
-		
-		for (int q=0;q<arr.length;q++) {
-			arr [q]=x;
-			x++;
-		}
-		
-		int arr3 []= new int [26];
-		
-		for (int w=0;w<str1.length();w++) {
-			for (int e=0;e<arr.length;e++) {
-				if (str1.charAt(w)==arr [e]) {
-					arr3[e]++;
+
+		int arr2[] = new int[n];// массив записи индекса
+		for (int j = 0; j < n; j++) {
+			char[] arr3 = arr[j].toCharArray();
+			int counter = 0;
+			for (int z = 0; z < arr3.length; z++) {
+				for (int c = z + 1; c < arr3.length; c++) {
+
+					if (arr3[z] == arr3[c] && arr3[z] != '\u0000') {
+						arr3[c] = '\u0000';
+						counter++;
+					}
 				}
+
+			}
+			arr2[j] = arr[j].length() - counter;
+		}
+
+		int min = arr2[0];
+		int x = 0; // искомое слово
+
+		for (int t = 0; t < arr2.length; t++) {
+			if (arr2[t] < min) {
+				min = arr2[t];
+				x = i;
+				break;
 			}
 		}
-		
-		int countM1 = 0;
-		for (int n=0;n<arr3.length;n++) {
-			if (arr3[n]==1) {
-				countM1++; 
-			}
-		}	
-		
-		//2
-		
-		for (int z=0;z<str2.length();z++) {
-			for (int s=0;s<arr.length;s++) {
-				if (str1.charAt(z)==arr [s]) {
-					arr3[s]++;
-				}
-			}
+		if (x == arr.length) {
+			x = x - 1;
 		}
-		
-		int countM2 = 0;
-		for (int g=0;g<arr3.length;g++) {
-			if (arr3[g]==1) {
-				countM2++; 
-			}
-		}	
-		
-		//3
-		
-		for (int p=0;p<str3.length();p++) {
-			for (int y=0;y<arr.length;y++) {
-				if (str1.charAt(p)==arr [y]) {
-					arr3[y]++;
-				}
-			}
-		}
-		
-		int countM3 = 0;
-		for (int r=0;r<arr3.length;r++) {
-			if (arr3[r]==1) {
-				countM3++; 
-			}
-		}	
-		
-		if (countM1 > countM2) {
-			if (countM2>countM3);
-			System.out.println("str3");
-		}else if (countM1 < countM3){
-			System.out.println("str1");
-		}else {
-			System.out.println("str2");
-		}
+		System.out.println("Искомое: " + arr[x]);
 	}
 }
