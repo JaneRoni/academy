@@ -22,7 +22,7 @@ public class HW2_Task3 {
 		String cut2 = str2.substring(len2);
 		
 		String total = cut1 + cut2;
-		System.out.println(total);	
+		System.out.println("Новое слово: "+total);	
 	}
 
 }
