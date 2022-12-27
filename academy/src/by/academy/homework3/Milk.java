@@ -14,12 +14,16 @@ public class Milk extends Product {
 	}
 	
 protected double getDiscount() {
-		
+		if (quantity>10) {
+			return 0.95;
+		}
 		return 1;
 	}
 	
 	public double CalcPrice() {
 		return quantity * price * getDiscount();
 	}
+	
+	
 
 }

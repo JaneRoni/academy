@@ -2,48 +2,18 @@ package by.academy.lesson10;
 
 import java.awt.print.Printable;
 
-public class Magazin implements Printable {
-	private String Name;
-	int year;
-
-	public Magazin() {
-
-	}
-
-	public Magazin(String Name, int year) {
-		super();
-		this.Name = Name;
-		this.year = year;
-
-	}
-
-	public String getName() {
-		return Name;
-	}
-
-	public void setName() {
-		this.Name = Name;
-	}
-
-	public int getYear() {
-		return year;
-	}
-
-	public void setYear() {
-		this.year = year;
-	}
+public class Magazine implements Printable {
 
 	@Override
 	public void print() {
-		System.out.println("Magazin " + Name);
+		System.out.println("Print magazine");
+
 	}
 
-	public static void printMagazine(Printable[] printable) {
-
-		for (Printable p : printable) {
-			if (p instanceof Magazin) {
-				// System.out.println("Magazine "+ Name);
-				p.print();
+	public static void printMagazines(Printable[] printable) {
+		for (Printable help : printable) {
+			if (help instanceof Magazine) {
+				help.print();
 			}
 
 		}

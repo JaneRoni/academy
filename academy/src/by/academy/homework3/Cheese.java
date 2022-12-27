@@ -12,13 +12,7 @@ public class Cheese extends Product {
 		this.old = old;
 	}
 
-	@Override
-	protected double getDiscount() {
-		if (quantity > 5) {
-			return 0.9;
-		}
-		return 1;
-	}
+	
 	
 	public int getOld() {
 		return old;
@@ -28,4 +22,11 @@ public class Cheese extends Product {
 		this.old = old;
 	}
 
+	@Override
+	protected double getDiscount() {
+		if (quantity > 5) {
+			return 0.9;//10% от 5 штук
+		}
+		return 1;
+	}
 }
