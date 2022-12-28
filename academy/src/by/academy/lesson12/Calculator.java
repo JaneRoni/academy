@@ -1,26 +1,24 @@
 package by.academy.lesson12;
 
-//9.	Написать класс Калькулятор (необобщенный), который содержит обобщенные статические 
-//методы - sum, multiply, divide, subtraction. Параметры этих методов  - два числа разного типа, 
-//над которыми должна быть произведена операция.
+//9.	РќР°РїРёСЃР°С‚СЊ РєР»Р°СЃСЃ РљР°Р»СЊРєСѓР»СЏС‚РѕСЂ (РЅРµРѕР±РѕР±С‰РµРЅРЅС‹Р№), РєРѕС‚РѕСЂС‹Р№ СЃРѕРґРµСЂР¶РёС‚ РѕР±РѕР±С‰РµРЅРЅС‹Рµ СЃС‚Р°С‚РёС‡РµСЃРєРёРµ 
+//РјРµС‚РѕРґС‹ - sum, multiply, divide, subtraction. РџР°СЂР°РјРµС‚СЂС‹ СЌС‚РёС… РјРµС‚РѕРґРѕРІ  - РґРІР° С‡РёСЃР»Р° СЂР°Р·РЅРѕРіРѕ С‚РёРїР°, 
+//РЅР°Рґ РєРѕС‚РѕСЂС‹РјРё РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РїСЂРѕРёР·РІРµРґРµРЅР° РѕРїРµСЂР°С†РёСЏ.
 
 public class Calculator {
-	
-	
-	
-	public static <T extends Number,V extends Number> double Sum(T a, V b) {
-		return a.doubleValue()+b.doubleValue();
-	}
-	
-	public static <T extends Number,V extends Number> double multiply(T a, V b) {
-		return a.doubleValue()*b.doubleValue();
+
+	public static <T extends Number, V extends Number> double Sum(T a, V b) {
+		return a.doubleValue() + b.doubleValue();
 	}
 
-	public static <T extends Number,V extends Number> double divide(T a, V b) {
-		return a.doubleValue()/b.doubleValue();
+	public static <T extends Number, V extends Number> double multiply(T a, V b) {
+		return a.doubleValue() * b.doubleValue();
 	}
-	
-	public static <T extends Number,V extends Number> double subtraction(T a, V b) {
-		return a.doubleValue()-b.doubleValue();
+
+	public static <T extends Number, V extends Number> double divide(T a, V b) {
+		return a.doubleValue() / b.doubleValue();
+	}
+
+	public static <T extends Number, V extends Number> double subtraction(T a, V b) {
+		return a.doubleValue() - b.doubleValue();
 	}
 }
