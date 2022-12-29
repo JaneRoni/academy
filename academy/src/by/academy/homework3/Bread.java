@@ -13,6 +13,7 @@ public class Bread extends Product {
 		this.quantity = quantity;
 	}
 	
+	@Override
 	public double getDiscount() {
 		if (quantity>3) {
 			return 0.99;
@@ -20,19 +21,21 @@ public class Bread extends Product {
 		return 1;
 	}
 	
-	public double CalcPrice() {
+
+	@Override
+	protected double getCalcPrice() {
 		return quantity * price * getDiscount();
 	}
 	
-	public static void main(String ...args) {
-	Bread bread[] = new Bread[5]; 
-	bread[0]="Бородинский";
-	bread[1]="Столичный";
-	bread[2]="Венский";
-	bread[3]="Восточный";
-	bread[4]="Купеческий";
+//	public static void main(String ...args) {
+//	Bread bread[] = new Bread[5]; 
+//	bread[0]="Бородинский";
+//	bread[1]="Столичный";
+//	bread[2]="Венский";
+//	bread[3]="Восточный";
+//	bread[4]="Купеческий";
 	
 	
-	}
+//	}
 
 }

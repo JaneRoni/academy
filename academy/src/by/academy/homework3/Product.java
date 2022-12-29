@@ -5,23 +5,18 @@ public abstract class Product {
 	protected String name;
 	protected double quantity;
 	protected double price;
-	protected double discount = 0;
 
-	
-	//конструкторы
 	public Product() {
 		super();
 	}
 
-	public Product(String name, double quantity, double price,int discount) {
+	public Product(String name, double quantity, double price) {
 		super();
 		this.name = name;
 		this.quantity = quantity;
 		this.price = price;
-		this.discount = discount;
 	}
 
-	//get-set
 	public String getName() {
 		return name;
 	}
@@ -45,16 +40,9 @@ public abstract class Product {
 	public void setPrice() {
 		this.price = price;
 	}
-	
-	
-	protected double getDiscount() { //возрат скидки
-		return 1;
-	}
 
-	public double CalcPrice() {
-		return quantity * price * getDiscount();
-	}
+	protected abstract double getDiscount();
 
-	String Product[] = new String[5];
+	protected abstract double getCalcPrice();
 
 }
