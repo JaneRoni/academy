@@ -1,41 +1,65 @@
 package by.academy.homework3;
 
 public class Bread extends Product {
-	
-	public Bread () {
+
+	public Bread() {
 		super();
 	}
-	
+
 	public Bread(String name, double quantity, double price) {
 		super();
 		this.name = name;
 		this.price = price;
 		this.quantity = quantity;
 	}
-	
+
 	@Override
 	public double getDiscount() {
-		if (quantity>3) {
+		if (quantity > 3) {
 			return 0.99;
 		}
 		return 1;
 	}
-	
 
 	@Override
 	protected double getCalcPrice() {
 		return quantity * price * getDiscount();
 	}
-	
-//	public static void main(String ...args) {
-//	Bread bread[] = new Bread[5]; 
-//	bread[0]="Бородинский";
-//	bread[1]="Столичный";
-//	bread[2]="Венский";
-//	bread[3]="Восточный";
-//	bread[4]="Купеческий";
-	
-	
+
+	@Override
+	public String getName() {
+		return name;
+	}
+
+	@Override
+	public void setName() {
+		this.name = name;
+	}
+
+	@Override
+	public double getQuantity() {
+		return quantity;
+	}
+
+	@Override
+	public void setQuantity() {
+		this.quantity = quantity;
+	}
+
+	@Override
+	public double getPrice() {
+		return price;
+	}
+
+	@Override
+	public void setPrice() {
+		this.price = price;
+	}
+
+	Bread bread[] = new Bread[10];
+
+//	public Bread[] getField() {
+//		return null;
 //	}
 
 }

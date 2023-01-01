@@ -13,7 +13,6 @@ public class Milk extends Product {
 		this.quantity = quantity;
 	}
 
-	
 	@Override
 	protected double getDiscount() {
 		if (quantity > 10) {
@@ -25,6 +24,16 @@ public class Milk extends Product {
 	@Override
 	protected double getCalcPrice() {
 		return quantity * price * getDiscount();
+	}
+
+	@Override
+	public String getName() {
+		return name;
+	}
+
+	@Override
+	public void setName() {
+		this.name = name;
 	}
 
 }
