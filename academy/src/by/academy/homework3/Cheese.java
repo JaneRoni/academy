@@ -20,7 +20,6 @@ public class Cheese extends Product {
 		this.age = age;
 	}
 
-	
 	@Override
 	protected double getDiscount() {
 		if (quantity > 5) {
@@ -33,6 +32,6 @@ public class Cheese extends Product {
 	protected double getCalcPrice() {
 		return quantity * price * getDiscount();
 	}
-	
+
 	
 }
