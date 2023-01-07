@@ -1,12 +1,14 @@
 package by.academy.homework4;
 
+import java.util.regex.Pattern;
+
 //Задание 1.
 //+Создать класс CustomDate, используя вложенные классы Год, Месяц, День. 
 //+Методы: задать дату, вывести на консоль день недели по заданной дате. 
 //+День недели представить в виде перечисления. 
 //+Рассчитать количество дней, в заданном временном промежутке.
-//Один из конструкторов - строка в формате dd-mm-yyyy, добавить валидацию для этой строки. 
-//После валидации в конструкторе создаем объекты класса Year, Month, Day.
+//+Один из конструкторов - строка в формате dd-mm-yyyy, добавить валидацию для этой строки. 
+//+После валидации в конструкторе создаем объекты класса Year, Month, Day.
 //Добавить метод, который проверяет высокосный ли год или нет.
 
 public class CustomDate {
@@ -80,32 +82,56 @@ public class CustomDate {
 	}
 
 	public static String customDateStr;
-	public static int year;
-	public static int month;
-	public static int day;
+	public static int yearCD;
+	public static int monthCD;
+	public static int dayCD;
 
 	public CustomDate() {
 		super();
 	}
 
-	public CustomDate(int year, int month, int day) {
+	public CustomDate(int yearCD, int monthCD, int dayCD) {
 		this();
-		this.year = year;
-		this.month = month;
-		this.day = day;
+		this.yearCD = yearCD;
+		this.monthCD = monthCD;
+		this.dayCD = dayCD;
+	}
+
+	public void createCustomDateStr(int yearCD, int monthCD, int dayCD) {
+		CustomDate customDate = new CustomDate();
+		CustomDate.customDateStr = customDate.dayCD + "-" + customDate.monthCD + "-" + customDate.yearCD;
+//		System.out.println("str "+CustomDate.customDateStr);//test
 	}
 
 	public void createCustomDate() {
 		CustomDate customDate = new CustomDate();
-		customDate.year = Year.year;
-		customDate.month = Month.month;
-		customDate.day = Day.day;
+		customDate.yearCD = Year.year;
+		customDate.monthCD = Month.month;
+		customDate.dayCD = Day.day;
 //		System.out.println("Проверка созд CustomDate "+customDate);// тест
-		CustomDate.customDateStr = customDate.day + "-" + customDate.month + "-" + customDate.year;
+
 	}
 
-	public String getCustomDateStr() {
-		return customDateStr;
+	public class ValidCustomDate implements ValidatorDate {
+
+		public static final Pattern pattern = Pattern.compile("(\\d{1,2}[\\-]{1}\\d{1,2}[\\-]{1}\\d{4})+");
+
+		public int counterError = 0;
+
+		@Override
+		public String validate() {
+			String customDateStr = CustomDate.customDateStr;
+
+			if (pattern.matcher(customDateStr).matches()) {
+				System.out.println("Введен верно");
+				counterError = 1;
+			} else {
+				System.out.println("ERROR");
+				counterError = 0;
+			}
+			return customDateStr;
+		}
+
 	}
 
 }

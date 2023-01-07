@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 import by.academy.homework4.CustomDate.Day;
 import by.academy.homework4.CustomDate.Month;
+import by.academy.homework4.CustomDate.ValidCustomDate;
 import by.academy.homework4.CustomDate.Year;
 
 public class CustomDateDemo {
@@ -20,32 +21,48 @@ public class CustomDateDemo {
 		System.out.println("Введите день: ");
 
 		int dayAdd = scan.nextInt();
-		day.createDay();
-//		System.out.println("проверка1 "+Day.day);//проверка
-		day.setDay(dayAdd);
-//		System.out.println("проверка2 "+Day.day);//проверка
+		CustomDate.dayCD = dayAdd;
 
 		CustomDate.Month month = customDate.new Month();// месяц
 
 		System.out.println("Введите месяц: ");
 
 		int monthAdd = scan.nextInt();
-		month.createMonth();
-		month.setMonth(monthAdd);
-//		System.out.println("проверка2 "+Month.month);//проверка
+		CustomDate.monthCD = monthAdd;
 
 		CustomDate.Year year = customDate.new Year();// год
-
 		System.out.println("Введите год: ");
 		int yearAdd = scan.nextInt();
-		year.createYear();
-		year.setYear(yearAdd);
-//		System.out.println("проверка2 "+Year.year);//проверка
+		CustomDate.yearCD = yearAdd;
 
-		customDate.createCustomDate();// +
+		customDate.createCustomDateStr(yearAdd, monthAdd, dayAdd);// констр строки
+//		System.out.println("проверка str "+customDate.customDateStr);//проверка
+
+		CustomDate.ValidCustomDate validCustomDate = customDate.new ValidCustomDate();
+		validCustomDate.validate();
+
+//		System.out.println("проверка dayAdd " + dayAdd);// проверка
+//		System.out.println("проверка CustomDate.dayCD " + CustomDate.dayCD);// проверка
+//		System.out.println("проверка obj day " + Day.day);// проверка
+//		System.out.println("проверка counterError " + validCustomDate.counterError);// проверка
+
+		if (validCustomDate.counterError == 1) {
+			day.createDay();
+			day.setDay(dayAdd);
+//			System.out.println("проверка2 " + Day.day);// проверка
+
+			month.createMonth();
+			month.setMonth(monthAdd);
+//			System.out.println("проверка2 " + Month.month);// проверка
+
+			year.createYear();
+			year.setYear(yearAdd);
+//			System.out.println("проверка2 " + Year.year);// проверка
+
+			customDate.createCustomDate();
+		}
 
 //		System.out.println(CustomDate.year);//+
-//		System.out.println(customDate.getCustomDateStr());
 
 		LocalDate today = LocalDate.now();
 		LocalDate customDateLD = LocalDate.of(Year.year, Month.month, Day.day);
