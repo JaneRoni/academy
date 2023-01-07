@@ -27,7 +27,6 @@ public class CustomDate {
 
 		public void createYear() {
 			Year year = new Year();
-//			System.out.println("Проверка созд Year " + year);// тест
 		}
 
 		public void setYear(int year) {
@@ -50,7 +49,6 @@ public class CustomDate {
 
 		public void createMonth() {
 			Month month = new Month();
-//			System.out.println("Проверка созд Month " + month);// тест
 		}
 
 		public void setMonth(int month) {
@@ -73,7 +71,6 @@ public class CustomDate {
 
 		public void createDay() {
 			Day day = new Day();
-//			System.out.println("Проверка созд " + day);// тест
 		}
 
 		public void setDay(int day) {
@@ -100,7 +97,6 @@ public class CustomDate {
 	public void createCustomDateStr(int yearCD, int monthCD, int dayCD) {
 		CustomDate customDate = new CustomDate();
 		CustomDate.customDateStr = customDate.dayCD + "-" + customDate.monthCD + "-" + customDate.yearCD;
-//		System.out.println("str "+CustomDate.customDateStr);//test
 	}
 
 	public void createCustomDate() {
@@ -108,8 +104,6 @@ public class CustomDate {
 		customDate.yearCD = Year.year;
 		customDate.monthCD = Month.month;
 		customDate.dayCD = Day.day;
-//		System.out.println("Проверка созд CustomDate "+customDate);// тест
-
 	}
 
 	public class ValidCustomDate implements ValidatorDate {

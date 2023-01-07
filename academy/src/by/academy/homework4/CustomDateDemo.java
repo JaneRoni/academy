@@ -36,33 +36,22 @@ public class CustomDateDemo {
 		CustomDate.yearCD = yearAdd;
 
 		customDate.createCustomDateStr(yearAdd, monthAdd, dayAdd);// констр строки
-//		System.out.println("проверка str "+customDate.customDateStr);//проверка
 
 		CustomDate.ValidCustomDate validCustomDate = customDate.new ValidCustomDate();
 		validCustomDate.validate();
 
-//		System.out.println("проверка dayAdd " + dayAdd);// проверка
-//		System.out.println("проверка CustomDate.dayCD " + CustomDate.dayCD);// проверка
-//		System.out.println("проверка obj day " + Day.day);// проверка
-//		System.out.println("проверка counterError " + validCustomDate.counterError);// проверка
-
 		if (validCustomDate.counterError == 1) {
 			day.createDay();
 			day.setDay(dayAdd);
-//			System.out.println("проверка2 " + Day.day);// проверка
 
 			month.createMonth();
 			month.setMonth(monthAdd);
-//			System.out.println("проверка2 " + Month.month);// проверка
 
 			year.createYear();
 			year.setYear(yearAdd);
-//			System.out.println("проверка2 " + Year.year);// проверка
 
 			customDate.createCustomDate();
 		}
-
-//		System.out.println(CustomDate.year);//+
 
 		LocalDate today = LocalDate.now();
 		LocalDate customDateLD = LocalDate.of(Year.year, Month.month, Day.day);
