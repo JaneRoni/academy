@@ -29,7 +29,7 @@ public class L11T1 {
 		String todayHB1 = todayHB.toString();
 
 		
-		boolean e = todayHB1.is 
+		//boolean e = todayHB1.is 
 		//System.out.println(dayOfYear.)
 	}
 }
