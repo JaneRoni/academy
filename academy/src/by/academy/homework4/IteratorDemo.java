@@ -9,6 +9,9 @@ public class IteratorDemo {
 		Scanner scan = new Scanner (System.in);
 		System.out.println("Введите индекс: ");
 		CustomIterator.count = scan.nextInt();
+		System.out.println("Введите значение для удаления: ");
+		CustomIterator.x = scan.nextInt();
+		scan.close();
 
 		Integer[] array = { 3, 5, 7, 4 };
 

@@ -4,6 +4,7 @@ public class CustomIterator<E> implements Iterator<E> {
 
 	public E[] array;
 	public static int count;
+	public static Integer x;
 
 	public CustomIterator() {
 		super();
@@ -31,7 +32,12 @@ public class CustomIterator<E> implements Iterator<E> {
 
 	@Override
 	public void remove() {
+		if (x == array[count]) {
+			while (array.length >= count) {
 
+				array[count] = array[count++];
+			}
+		}
 	}
 
 }
