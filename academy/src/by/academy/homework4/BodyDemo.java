@@ -8,11 +8,8 @@ public class BodyDemo {
 	public static void main(String... args) {
 
 		Body body = new Body();
-//		System.out.println("body de" + body);// test
 		Heart heart = body.new Heart();
-//		System.out.println("new Heart de");// test
 		Lungs lungs = body.new Lungs();
-//		System.out.println("new Lungs de ");// test
 
 //		body.createBody();
 		lungs.live();
@@ -25,4 +22,3 @@ public class BodyDemo {
 	}
 
 }
-
