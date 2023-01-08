@@ -11,14 +11,11 @@ public class BodyDemo {
 		Heart heart = body.new Heart();
 		Lungs lungs = body.new Lungs();
 
+		body.live();
 //		body.createBody();
-		lungs.live();
-		heart.live();
 
 		System.out.println(
 				"You stand on the shore and feel the salty smell of the wind that blows from the sea. And I believe that you are free, and life has only begun.");
-
-		body.live();
 	}
 
 }

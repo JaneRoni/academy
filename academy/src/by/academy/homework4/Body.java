@@ -8,19 +8,15 @@ public class Body {
 
 	public Body() {
 		super();
+		this.heart = new Heart();
+		this.lungs = new Lungs();
 	}
 
-	public Body(Heart heart, Lungs lungs) {
-		super();
-		this.heart = body.new Heart();
-		this.lungs = body.new Lungs();
-	}
-
-	public void createBody() {
-		Body body = new Body();
-		Heart heart = body.new Heart();
-		Lungs lungs = body.new Lungs();
-	}
+//	public void createBody() {
+//		Body body = new Body();
+//		Heart heart = body.new Heart();
+//		Lungs lungs = body.new Lungs();
+//	}
 
 	class Heart {
 
