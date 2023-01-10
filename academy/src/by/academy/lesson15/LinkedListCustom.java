@@ -39,7 +39,7 @@ public class LinkedListCustom<T> {
 		
 		
 		
-		public T get(int index) {//поиск элемента
+		public T get(int index) {//"поиск элемента"
 			if (index >=size || index<0) {
 				//error
 			
