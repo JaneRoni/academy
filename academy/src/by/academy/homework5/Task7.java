@@ -52,18 +52,20 @@ public class Task7 {
 		}
 	}
 
-	// Complete the reverse function below.
-
-	/*
-	 * For your reference:
-	 *
-	 * DoublyLinkedList { int data; DoublyLinkedListNode next; DoublyLinkedListNode
-	 * prev; }
-	 *
-	 */
 	public static DoublyLinkedListNode reverse(DoublyLinkedList list) {
+		DoublyLinkedListNode currentNode = list.tail;
+		DoublyLinkedListNode tempNode = null;
+		while (currentNode.prev != null) {
+			tempNode = currentNode.next;
+			currentNode.next = currentNode.prev;
+			currentNode.prev = tempNode;
+			currentNode = currentNode.next;
+		}
+		tempNode = currentNode.next;
+		currentNode.next = currentNode.prev;
+		currentNode.prev = tempNode;
 
-		return null;
+		return list.tail;
 	}
 
 	private static final Scanner scanner = new Scanner(System.in);
