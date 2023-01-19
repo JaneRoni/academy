@@ -59,9 +59,9 @@ public class L18 {
 //			}
 			int a;
 			while ((a = filein.read()) != -1) {
-				System.out.println((char)a);
-				
-				if (replace.contains(INPUT_FILE.valueOf((char) 0).toString())) {//char to string
+				System.out.println((char) a);
+
+				if (replace.contains(Character.valueOf((char) a).toString())) {// char to string
 //					try (BufferedWriter out_bw2 = new BufferedWriter(new FileWriter(outputFile2))){
 					fileout.write('!');
 
