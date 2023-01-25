@@ -1,0 +1,10 @@
+Задание 1. 
+Прочесть информацию введеную из клавиатури и записать в созданный вами txt файл, если введена "stop" строка тогда закончить запись в файл.
+Задание 2.
+Создать руками текстовый файл, закинуть следующий текст:
+"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+Создать новый файл result.txt. Программно считать файл с текстом, удалить все пробелы и записать полученный текст в result.txt.
+Задание 3.
+ Создайте класс User с полями Имя, Фамилия, Возраст и конструктором(Имя, Фамилия, Возраст). В классе Main создайте ArrayList<User>, добавьте 10 пользователей в коллекцию. Создайте каталог(папку) users и для каждого пользователя создайте файл в этом каталоге. Назовите файл Имя_Фамилия.txt. Сериализуйте информацию о пользователе и положите в файл пользователя. Не забываем закрывать потоки. В блоке catch выводим сообщение ошибки на экран (System.err.println(e.getMessage());)
+Задание 4. 
+Создайте каталог(папку). Создайте в папке 100 txt файлов (Например, 1.txt, 2.txt ... 100.txt). Считываем текст из 2-ого задания, получаем его длинну (576 символов). Для каждого файла генерируем рандомное число от 0 до 576, достаем из текста (из 2 задания) такое-же количество символов (string.substring()) и сохраняем в наш файл. Создайте файл result.txt и запишите туда список всех файлов и их размеры.
