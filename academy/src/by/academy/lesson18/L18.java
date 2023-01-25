@@ -19,6 +19,7 @@ public class L18 {
 
 	public static void main(String... strings) {
 
+//		3.	Написать класс, который копирует содержимое из одного файла в другой.
 		File inputFile = new File(INPUT_FILE);
 //	if (!inputFile.exists()) {
 //		inputFile.createNewFile();

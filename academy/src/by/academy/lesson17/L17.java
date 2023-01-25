@@ -5,15 +5,14 @@ import java.util.regex.Pattern;
 
 public class L17 {
 
-//	1.	Создать статический метод который принимает на вход три параметра: 
-//		login, password и confirmPassword. Login должен содержать только латинские буквы, 
-//		цифры и знак подчеркивания. Длина login должна быть меньше 20 символов. 
-//		Если login не соответствует этим требованиям, необходимо выбросить WrongLoginException. 
-//		Password должен содержать только латинские буквы, цифры и знак подчеркивания. Длина password должна быть меньше 20 символов. 
-//		Также password и confirmPassword должны быть равны. Если password не соответствует этим требованиям, 
-//		необходимо выбросить WrongPasswordException.  WrongPasswordException и WrongLoginException - пользовательские классы исключения 
-//		с двумя конструкторами – один по умолчанию, второй принимает сообщение исключения и передает его в конструктор класса Exception. 
-//		Обработка исключений проводится внутри метода. Используем multi-catch block. Метод возвращает true, если значения верны или false в другом случае. (Задание с урока)
+//	1.	РЎРѕР·РґР°С‚СЊ СЃС‚Р°С‚РёС‡РµСЃРєРёР№ РјРµС‚РѕРґ РєРѕС‚РѕСЂС‹Р№ РїСЂРёРЅРёРјР°РµС‚ РЅР° РІС…РѕРґ С‚СЂРё РїР°СЂР°РјРµС‚СЂР°: login, password Рё confirmPassword. 
+//	Login РґРѕР»Р¶РµРЅ СЃРѕРґРµСЂР¶Р°С‚СЊ С‚РѕР»СЊРєРѕ Р»Р°С‚РёРЅСЃРєРёРµ Р±СѓРєРІС‹, С†РёС„СЂС‹ Рё Р·РЅР°Рє РїРѕРґС‡РµСЂРєРёРІР°РЅРёСЏ. Р”Р»РёРЅР° login РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РјРµРЅСЊС€Рµ 20 СЃРёРјРІРѕР»РѕРІ. 
+//	Р•СЃР»Рё login РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ СЌС‚РёРј С‚СЂРµР±РѕРІР°РЅРёСЏРј, РЅРµРѕР±С…РѕРґРёРјРѕ РІС‹Р±СЂРѕСЃРёС‚СЊ WrongLoginException. Password РґРѕР»Р¶РµРЅ СЃРѕРґРµСЂР¶Р°С‚СЊ 
+//	С‚РѕР»СЊРєРѕ Р»Р°С‚РёРЅСЃРєРёРµ Р±СѓРєРІС‹, С†РёС„СЂС‹ Рё Р·РЅР°Рє РїРѕРґС‡РµСЂРєРёРІР°РЅРёСЏ. Р”Р»РёРЅР° password РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РјРµРЅСЊС€Рµ 20 СЃРёРјРІРѕР»РѕРІ. РўР°РєР¶Рµ password 
+//	Рё confirmPassword РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ СЂР°РІРЅС‹. Р•СЃР»Рё password РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ СЌС‚РёРј С‚СЂРµР±РѕРІР°РЅРёСЏРј, РЅРµРѕР±С…РѕРґРёРјРѕ РІС‹Р±СЂРѕСЃРёС‚СЊ 
+//	WrongPasswordException.  WrongPasswordException Рё WrongLoginException - РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ РєР»Р°СЃСЃС‹ РёСЃРєР»СЋС‡РµРЅРёСЏ СЃ РґРІСѓРјСЏ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР°РјРё
+//	 вЂ“ РѕРґРёРЅ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ, РІС‚РѕСЂРѕР№ РїСЂРёРЅРёРјР°РµС‚ СЃРѕРѕР±С‰РµРЅРёРµ РёСЃРєР»СЋС‡РµРЅРёСЏ Рё РїРµСЂРµРґР°РµС‚ РµРіРѕ РІ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР° Exception. РћР±СЂР°Р±РѕС‚РєР° РёСЃРєР»СЋС‡РµРЅРёР№ РїСЂРѕРІРѕРґРёС‚СЃСЏ
+//	  РІРЅСѓС‚СЂРё РјРµС‚РѕРґР°. РСЃРїРѕР»СЊР·СѓРµРј multi-catch block. РњРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ true, РµСЃР»Рё Р·РЅР°С‡РµРЅРёСЏ РІРµСЂРЅС‹ РёР»Рё false РІ РґСЂСѓРіРѕРј СЃР»СѓС‡Р°Рµ. (Р—Р°РґР°РЅРёРµ СЃ СѓСЂРѕРєР°)
 
 	private static final Pattern VALIDATION = Pattern.compile("[A-Za-z0-9_]");
 //	private static final Pattern VALIDATEPASSWORD = Pattern.compile("[A-Za-z0-9_]{5.20}");
@@ -23,10 +22,9 @@ public class L17 {
 //		String login;
 //		String password;
 //		String confirmPassword;
-		
-		System.out.println(login("test","dfsgsgsgsdsd","dfsgsgsg"));
-		System.out.println(login("test","dfsgsgsgsdsd","dfsgsgsgsdsd"));
-		
+
+		System.out.println(login("test", "dfsgsgsgsdsd", "dfsgsgsg"));
+		System.out.println(login("test", "dfsgsgsgsdsd", "dfsgsgsgsdsd"));
 
 	}
 
@@ -49,15 +47,15 @@ public class L17 {
 		Matcher matcherpassword = VALIDATION.matcher(confirmPassword);
 
 		if (!matcherlogin.matches()) {
-			throw new WrongLoginException("Логин не совпадает");
+			throw new WrongLoginException("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 		}
 
 		if (!matcherpassword.matches()) {
-			throw new WrongPasswordException("Пароль не совпадает");
+			throw new WrongPasswordException("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 		}
 
 		if (password != confirmPassword) {
-			throw new WrongLoginException("Пароли не совпадают");
+			throw new WrongLoginException("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 		}
 		return true;
 	}
