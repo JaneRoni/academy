@@ -19,15 +19,15 @@ public class HW7Task1 {
 		List <Long> mapList = generateLongList(100,100);
 		
 		mapList.stream()
-		.map(i->i.intValue()
+		.map(i->i.intValue())
 		.peek(e->System.out.print(e*3.14-20))
 		.filter(i->i<100)
 		.sorted((o1,o2)->o1-o2)
 		.skip(3)
-		.map(v -> "Number: "+v)
+		.map((v)->v+"Number:")
 		.collect(Collectors.toList());
 		
-	
+//	System.out.println(mapList);
 	}
 
 	private static List<Long> generateLongList(int seed, int size) {
