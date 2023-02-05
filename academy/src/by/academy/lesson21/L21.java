@@ -5,13 +5,13 @@ import java.text.DateFormat.Field;
 
 public class L21 {
 
-	public static void Main(String... args) {
+	public static void main(String... args) {
 
-		Cat cat = new Cat("Vaska", 10, "британец");
+		Cat cat = new Cat("Vaska", 10, "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 		Class<Cat> catClass = Cat.class;
 		System.out.println("catClass " + catClass);
 
-		Tiger tiger = new Tiger("амурский", "лосось речной", "РФ");
+		Tiger tiger = new Tiger("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ", "пїЅпїЅ");
 		Class<Tiger> tigerClass = Tiger.class;
 		System.out.println("tigerClass " + tigerClass);
 
