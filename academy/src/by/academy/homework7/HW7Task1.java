@@ -24,8 +24,9 @@ public class HW7Task1 {
 		.filter(i->i<100)
 		.sorted((o1,o2)->o1-o2)
 		.skip(3)
-		.map((v)->v+"Number:")
-		.collect(Collectors.toList());
+		.map((v)->"Number: " + v)
+		.collect(Collectors.toList())
+		.toString();
 		
 //	System.out.println(mapList);
 	}

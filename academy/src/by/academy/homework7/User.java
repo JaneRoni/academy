@@ -3,7 +3,7 @@ package by.academy.homework7;
 public class User extends Person {
 
 	public String login;
-	public String password;
+	private String password;
 	public String email;
 
 	public User() {
