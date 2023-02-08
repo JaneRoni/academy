@@ -15,7 +15,6 @@ public class HW7Task2 {
 
 		Class<User> userClass = User.class;
 		Class<Person> personClass = Person.class;
-		;
 
 		try {
 
@@ -112,9 +111,11 @@ public class HW7Task2 {
 
 			Field ageFieldPerson = userClass.getSuperclass().getField("age"); // protected Superclass
 			ageFieldPerson.setAccessible(true);
-			int ageFieldPersonVal = ageFieldPerson.getInt(person);
 
-			System.out.println(ageFieldPersonVal);
+			System.out.println(Arrays.toString(ageFieldPerson.getClass().getDeclaredFields()));
+			Field modField = ageFieldPerson.getClass().getDeclaredField("modifiers");
+			modField.setAccessible(true);
+			modField.setInt(ageFieldPerson, ageFieldPerson.getModifiers() & ~Modifier.FINAL);
 
 			Field passwordFieldUser = userClass.getField("password"); // private
 			passwordFieldUser.setAccessible(true);
@@ -128,9 +129,8 @@ public class HW7Task2 {
 
 			Field dateOfBirthFieldPerson = userClass.getSuperclass().getField("dateOfBirth"); // private Superclass
 			dateOfBirthFieldPerson.setAccessible(true);
-			System.out.println(dateOfBirthFieldPerson.get(person));
-			dateOfBirthFieldPerson.set(person, "01.01.1900");
-			System.out.println(dateOfBirthFieldPerson.get(person));
+			int dateOfBirthFieldPersonVal = dateOfBirthFieldPerson.getInt(person);
+			System.out.println(dateOfBirthFieldPersonVal);
 
 		} catch (NoSuchMethodException | SecurityException | NoSuchFieldException | IllegalArgumentException
 				| IllegalAccessException | InvocationTargetException e) {
